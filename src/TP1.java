@@ -1,9 +1,15 @@
 import java.io.*;
+import java.util.*;
 import java.util.StringTokenizer;
 
 class TP1{
     private static InputReader in;
     private static PrintWriter out;
+    private static Deque<Agent> agentRank = new LinkedList<>();
+
+    static private String rankUpdate() {
+        return null;
+    }
 
     public static void main(String[] args) throws IOException {
         InputStream inputStream = System.in;
@@ -13,11 +19,45 @@ class TP1{
 
         //inisiasi input yang diperlukan pada sistem
         int c = in.nextInt();   // banyak batch
+        String space = in.next(); // batas dengan spasi
         int n = in.nextInt();   // banyak murid
 
         for (int i = 0; i < n; i++) {
-            String studentName = in.next();
-            String studentCode = in.next();
+            String agentName = in.next(); //nama murid
+            String agentCode = in.next(); //code
+
+            Agent agent = new Agent(agentName, agentCode);
+            agentRank.addFirst(agent);
+        }
+
+        int e = in.nextInt(); //banyak hari latian
+
+        for (int i = 0; i < e; i++) {
+            int p = in.nextInt(); // banyak update rangking
+            for (int j = 0; j < p; j++) {
+                String studentName = in.next();
+                int rankingCode = in.nextInt();
+            }
+        }
+        if (in.next().equals("PANUTAN")) {
+            int q = in.nextInt(); //batas ranking teratas
+
+        }
+        else if (in.next().equals("KOMPETITIF")){
+
+        }
+        else {
+
+        }
+    }
+
+    static class Agent {
+        String agentName;
+        String agentCode;
+
+        public Agent(String name, String code) {
+            this.agentName = name;
+            this.agentCode = code;
         }
     }
 
