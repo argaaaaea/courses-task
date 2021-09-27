@@ -42,10 +42,10 @@ class TP1{
 
     static private void handleKompetitif(int n){
         Object[] stringAgent = agentRank.toArray();
+        currentAgent = (String) stringAgent[0];
+        current = agentChoosen.get(currentAgent);
 
         for (int i = 0; i < agentRank.size() - 1; i++) {
-            currentAgent = (String) stringAgent[0];
-            current = agentChoosen.get(currentAgent);
 
             if (current < agentChoosen.get((String) stringAgent[i + 1])) {
                 currentAgent = (String) stringAgent[i + 1];
