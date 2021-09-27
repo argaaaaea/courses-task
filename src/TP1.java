@@ -5,10 +5,16 @@ import java.util.StringTokenizer;
 class TP1{
     private static InputReader in;
     private static PrintWriter out;
-    private static Deque<Agent> agentRank = new LinkedList<>();
+    private static Deque<String> agentRank = new LinkedList<>();
+    private static Map<String, String> agentOrigin = new HashMap<>();
 
-    static private String rankUpdate() {
-        return null;
+    static private void rankUpdate(String agent, int rankCode) {
+        agentRank.remove(agent);
+        if (rankCode == 0) {
+            agentRank.addFirst(agent);
+        } else {
+            agentRank.addLast(agent);
+        }
     }
 
     public static void main(String[] args) throws IOException {
@@ -18,26 +24,31 @@ class TP1{
         out = new PrintWriter(outputStream);
 
         //inisiasi input yang diperlukan pada sistem
-        int c = in.nextInt();   // banyak batch
-        String space = in.next(); // batas dengan spasi
-        int n = in.nextInt();   // banyak murid
+        int c = in.nextInt();               //banyak batch
+        int n = in.nextInt();               //banyak murid
 
         for (int i = 0; i < n; i++) {
-            String agentName = in.next(); //nama murid
-            String agentCode = in.next(); //code
+            String agentName = in.next();   //nama murid
+            String agentCode = in.next();   //code
 
-            Agent agent = new Agent(agentName, agentCode);
-            agentRank.addFirst(agent);
+            agentRank.add(agentName);
+            agentOrigin.put(agentName, agentCode);
         }
 
-        int e = in.nextInt(); //banyak hari latian
+        int e = in.nextInt();               //banyak hari latian
 
         for (int i = 0; i < e; i++) {
-            int p = in.nextInt(); // banyak update rangking
+            int p = in.nextInt();           //banyak update rangking
             for (int j = 0; j < p; j++) {
-                String studentName = in.next();
+                String agentName = in.next();
                 int rankingCode = in.nextInt();
+                rankUpdate(agentName, rankingCode);
             }
+            Object[] stringRank = agentRank.toArray();
+            for (int j = 0; j < n; j++) {
+                out.print(stringRank[j] + " ");
+            }
+            out.println();
         }
         if (in.next().equals("PANUTAN")) {
             int q = in.nextInt(); //batas ranking teratas
@@ -49,16 +60,7 @@ class TP1{
         else {
 
         }
-    }
-
-    static class Agent {
-        String agentName;
-        String agentCode;
-
-        public Agent(String name, String code) {
-            this.agentName = name;
-            this.agentCode = code;
-        }
+        out.flush();
     }
 
     static class InputReader {
