@@ -7,6 +7,7 @@ class TP1{
     private static PrintWriter out;
     private static Deque<String> agentRank = new LinkedList<>();
     private static Map<String, String> agentOrigin = new HashMap<>();
+    private static ArrayList<Integer> currentOriginHolder = new ArrayList<>();
 
     static private void rankUpdate(String agent, int rankCode) {
         agentRank.remove(agent);
@@ -15,6 +16,22 @@ class TP1{
         } else {
             agentRank.addLast(agent);
         }
+    }
+
+    static private void handlePanutan(int q) {
+        int countB = 0;
+        int countS = 0;
+        Object[] agentString = agentRank.toArray();
+        for (int i = 0; i < q; i++) {
+            String currentAgentCode = agentOrigin.get((String) agentString[i]);
+            if (currentAgentCode.equals("B")){
+                countB++;
+            } else {
+                countS++;
+            }
+        }
+        currentOriginHolder.add(countB);
+        currentOriginHolder.add(countS);
     }
 
     public static void main(String[] args) throws IOException {
@@ -53,6 +70,10 @@ class TP1{
         if (in.next().equals("PANUTAN")) {
             int q = in.nextInt(); //batas ranking teratas
 
+            handlePanutan(q);
+            for (Integer integer : currentOriginHolder) {
+                out.print(integer + " ");
+            }
         }
         else if (in.next().equals("KOMPETITIF")){
 
