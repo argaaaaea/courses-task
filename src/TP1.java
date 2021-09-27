@@ -46,7 +46,6 @@ class TP1{
         current = agentChoosen.get(currentAgent);
 
         for (int i = 0; i < agentRank.size() - 1; i++) {
-
             if (current < agentChoosen.get((String) stringAgent[i + 1])) {
                 currentAgent = (String) stringAgent[i + 1];
                 current = agentChoosen.get((String) stringAgent[i + 1]);
@@ -62,7 +61,6 @@ class TP1{
 
         //inisiasi input yang diperlukan pada sistem
         int c = in.nextInt();                   //banyak batch
-
         for (int h = 0; h < c; h++) {
             int n = in.nextInt();               //banyak murid
 
@@ -74,7 +72,6 @@ class TP1{
                 agentOrigin.put(agentName, agentCode);
                 agentChoosen.put(agentName, 0);
             }
-
             int e = in.nextInt();               //banyak hari latian
 
             for (int i = 0; i < e; i++) {
@@ -87,11 +84,15 @@ class TP1{
                     rankUpdate(agentName, rankingCode);
                 }
                 Object[] stringRank = agentRank.toArray();
-
+                StringBuilder stringHasil = new StringBuilder();
                 for (int j = 0; j < n; j++) {
-                    out.print(stringRank[j] + " ");
+                    stringHasil.append(stringRank[j]);
+                    stringHasil.append(" ");
+                    if ((j + 1) % n == 0){
+                        stringHasil.append("\n");
+                    }
                 }
-                out.println();
+                out.print(stringHasil);
             }
             String command = in.next();
 
@@ -99,16 +100,21 @@ class TP1{
                 int q = in.nextInt(); //batas ranking teratas
 
                 handlePanutan(q);
+                StringBuilder stringHasil = new StringBuilder();
                 for (Integer integer : currentOriginHolder) {
-                    out.print(integer + " ");
+                    stringHasil.append(integer);
+                    stringHasil.append(" ");
                 }
-                out.println();
+                out.print(stringHasil);
+                out.print("\n");
             }
             else if (command.equals("KOMPETITIF")){
                 handleKompetitif(n);
-                out.print(currentAgent + " " + current);
-
-                out.println();
+                StringBuilder stringHasil = new StringBuilder();
+                stringHasil.append(currentAgent);
+                stringHasil.append(" ");
+                stringHasil.append(current);
+                out.println(stringHasil);
             }
             else {
 
