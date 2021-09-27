@@ -42,45 +42,53 @@ class TP1{
 
         //inisiasi input yang diperlukan pada sistem
         int c = in.nextInt();               //banyak batch
-        int n = in.nextInt();               //banyak murid
 
-        for (int i = 0; i < n; i++) {
-            String agentName = in.next();   //nama murid
-            String agentCode = in.next();   //code
+        for (int h = 0; h < c; h++) {
+            int n = in.nextInt();               //banyak murid
+            for (int i = 0; i < n; i++) {
+                String agentName = in.next();   //nama murid
+                String agentCode = in.next();   //code
 
-            agentRank.add(agentName);
-            agentOrigin.put(agentName, agentCode);
-        }
-
-        int e = in.nextInt();               //banyak hari latian
-
-        for (int i = 0; i < e; i++) {
-            int p = in.nextInt();           //banyak update rangking
-            for (int j = 0; j < p; j++) {
-                String agentName = in.next();
-                int rankingCode = in.nextInt();
-                rankUpdate(agentName, rankingCode);
+                agentRank.add(agentName);
+                agentOrigin.put(agentName, agentCode);
             }
-            Object[] stringRank = agentRank.toArray();
-            for (int j = 0; j < n; j++) {
-                out.print(stringRank[j] + " ");
+
+            int e = in.nextInt();               //banyak hari latian
+
+            for (int i = 0; i < e; i++) {
+                int p = in.nextInt();           //banyak update rangking
+                for (int j = 0; j < p; j++) {
+                    String agentName = in.next();
+                    int rankingCode = in.nextInt();
+                    rankUpdate(agentName, rankingCode);
+                }
+                Object[] stringRank = agentRank.toArray();
+                for (int j = 0; j < n; j++) {
+                    out.print(stringRank[j] + " ");
+                }
+                out.println();
             }
-            out.println();
-        }
-        if (in.next().equals("PANUTAN")) {
-            int q = in.nextInt(); //batas ranking teratas
+            String command = in.next();
+            if (command.equals("PANUTAN")) {
+                int q = in.nextInt(); //batas ranking teratas
 
-            handlePanutan(q);
-            for (Integer integer : currentOriginHolder) {
-                out.print(integer + " ");
+                handlePanutan(q);
+                for (Integer integer : currentOriginHolder) {
+                    out.print(integer + " ");
+                }
+                out.println();
             }
-        }
-        else if (in.next().equals("KOMPETITIF")){
+            else if (command.equals("KOMPETITIF")){
 
-        }
-        else {
+            }
+            else {
 
+            }
+            agentRank.clear();
+            agentOrigin.clear();
+            currentOriginHolder.clear();
         }
+
         out.flush();
     }
 
