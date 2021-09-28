@@ -3,7 +3,7 @@ import java.lang.reflect.Array;
 import java.util.*;
 import java.util.StringTokenizer;
 
-class TP1{
+class TP1v2{
     private static InputReader in;
     private static PrintWriter out;
     private static String currentAgent;
@@ -97,7 +97,9 @@ class TP1{
                     }
                 }
             }
+            out.print(stringHasil);
             String command = in.next();
+            stringHasil.setLength(0);
 
             switch (command) {
                 case "PANUTAN": {
