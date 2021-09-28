@@ -12,6 +12,10 @@ class TP1{
     private static Map<String, String> agentOrigin = new HashMap<>();
     private static Deque<Integer> currentOriginHolder = new LinkedList<>();
     private static Map<String, Integer> agentChoosen = new HashMap<>();
+    private static ArrayList<String> rankDown = new ArrayList<>();
+    private static StringBuilder stringHasil = new StringBuilder();
+    private static Deque<String> dontAddThis = new LinkedList<>();
+
 
     static private void rankUpdate(String agent, int rankCode) {
         agentRank.remove(agent);
@@ -35,6 +39,7 @@ class TP1{
             } else {
                 countS++;
             }
+            agentOrigin.remove((String) agentString[i]);
         }
         currentOriginHolder.addFirst(countB);
         currentOriginHolder.addLast(countS);
@@ -53,9 +58,28 @@ class TP1{
         }
     }
 
-    static private void handleEvaluasi() {
-
+    static private void handleEvaluasi(ArrayList<String> rankYesterday,ArrayList<String> rankToday, int n) {
+        for (int i = 0; i < n; i++) {
+            String current = rankYesterday.get(i);
+            if (rankToday.indexOf(current) < i) {
+                dontAddThis.add(current);
+            }
+        }
     }
+
+    static private void printEvaluasi(){
+        if (dontAddThis.isEmpty()){
+            rankDown.add("TIDAK ADA");
+        }
+        else {
+            for (Object agent : agentRank.toArray()) {
+                if (!Objects.equals(dontAddThis.poll(), agent)) {
+                    rankDown.add((String) agent);
+                }
+            }
+        }
+    }
+
 
     public static void main(String[] args) throws IOException {
         InputStream inputStream = System.in;
@@ -77,16 +101,17 @@ class TP1{
                 agentChoosen.put(agentName, 0);
             }
             int e = in.nextInt();               //banyak hari latian
-            StringBuilder stringHasil = new StringBuilder();
 
             for (int i = 0; i < e; i++) {
                 int p = in.nextInt();           //banyak update rangking
-
+                ArrayList<String> rankYesterday = new ArrayList<String>(agentRank);
                 for (int j = 0; j < p; j++) {
                     String agentName = in.next();
                     int rankingCode = in.nextInt();
                     rankUpdate(agentName, rankingCode);
                 }
+                ArrayList<String> rankToday = new ArrayList<String>(agentRank);
+                handleEvaluasi(rankYesterday, rankToday, n);
 
                 Object[] stringRank = agentRank.toArray();
                 for (int j = 0; j < n; j++) {
@@ -110,9 +135,7 @@ class TP1{
                         stringHasil.append(" ");
 
                     }
-                    out.print(stringHasil);
                     out.print("\n");
-                    stringHasil.setLength(0);
                     break;
                 }
                 case "KOMPETITIF": {
@@ -120,19 +143,28 @@ class TP1{
                     stringHasil.append(currentAgent);
                     stringHasil.append(" ");
                     stringHasil.append(current);
-                    out.println(stringHasil);
+                    out.print("\n");
                     current = 0;
                     currentAgent = "";
-                    stringHasil.setLength(0);
                     break;
                 }
                 case "EVALUASI":
-
+                    printEvaluasi();
+                    for (int i = 0; i < rankDown.size(); i++) {
+                        Object[] stringRankDown = rankDown.toArray();
+                        stringHasil.append(stringRankDown[i]);
+                        stringHasil.append(" ");
+                    }
+                    out.print("\n");
+                    rankDown.clear();
                     break;
             }
+            out.print(stringHasil);
+            stringHasil.setLength(0);
             agentRank.clear();
-            agentOrigin.clear();
             agentChoosen.clear();
+            rankDown.clear();
+            dontAddThis.clear();
         }
 
         out.flush();
