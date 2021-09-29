@@ -12,7 +12,6 @@ class TP1{
     private static Map<String, String> agentOrigin = new HashMap<>();
     private static Deque<Integer> currentOriginHolder = new LinkedList<>();
     private static Map<String, Integer> agentChoosen = new HashMap<>();
-    //private static Map<String, Boolean> rankDown = new HashMap<>();
     private static Queue<String> dontAdd = new LinkedList<>();
     private static Map<String, Integer> rank = new HashMap<>();
 
@@ -45,8 +44,8 @@ class TP1{
     static private void handleKompetitif(int n) {
         currentAgent = agentRank.poll();
         current = agentChoosen.get(currentAgent);
-
-        for (int i = 0; i <= agentRank.size() ; i++) {
+        int size = agentRank.size();
+        for (int i = 0; i < size ; i++) {
             String tempAgent = agentRank.poll();
             if (current < agentChoosen.get(tempAgent)) {
                 currentAgent = tempAgent;
@@ -89,7 +88,7 @@ class TP1{
 
                 for (int j = 0; j < n; j++) {
                     String tempAgent = agentRank.poll();
-                    if (j + 1 < rank.get(tempAgent)){
+                    if (j + 1 < rank.get(tempAgent) && !(dontAdd.contains(tempAgent))){
                         dontAdd.add(tempAgent);
                     }
                     rank.put(tempAgent, j + 1);
@@ -124,13 +123,15 @@ class TP1{
                     break;
                 }
                 case "EVALUASI": {
-                    agentRank.removeAll(dontAdd);
-                    int size = agentRank.size();
-                    for (int i = 0; i < size; i++) {
-                        String currAgent = agentRank.poll();
-                        if (currAgent == null){
-                            stringHasil.append("TIDAK ADA");
-                        } else {
+                    if (dontAdd.size() == agentRank.size()) {
+                        stringHasil.append("TIDAK ADA");
+                    }
+                    else {
+                        agentRank.removeAll(dontAdd);
+                        int size = agentRank.size();
+                        for (int i = 0; i < size; i++) {
+                            String currAgent = agentRank.poll();
+                            System.out.println(currAgent);
                             stringHasil.append(currAgent);
                             stringHasil.append(" ");
                         }
