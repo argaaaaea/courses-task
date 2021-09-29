@@ -12,6 +12,9 @@ class TP1{
     private static Map<String, String> agentOrigin = new HashMap<>();
     private static Deque<Integer> currentOriginHolder = new LinkedList<>();
     private static Map<String, Integer> agentChoosen = new HashMap<>();
+    //private static Map<String, Boolean> rankDown = new HashMap<>();
+    private static Queue<String> dontAdd = new LinkedList<>();
+    private static Map<String, Integer> rank = new HashMap<>();
 
     static private void rankUpdate(String agent, int rankCode) {
         agentRank.remove(agent);
@@ -43,17 +46,13 @@ class TP1{
         currentAgent = agentRank.poll();
         current = agentChoosen.get(currentAgent);
 
-        for (int i = 0; i <= agentRank.size(); i++) {
+        for (int i = 0; i <= agentRank.size() ; i++) {
             String tempAgent = agentRank.poll();
             if (current < agentChoosen.get(tempAgent)) {
                 currentAgent = tempAgent;
                 current = agentChoosen.get(tempAgent);
             }
         }
-    }
-
-    static private void handleEvaluasi() {
-
     }
 
     public static void main(String[] args) throws IOException {
@@ -74,6 +73,7 @@ class TP1{
                 agentRank.add(agentName);
                 agentOrigin.put(agentName, agentCode);
                 agentChoosen.put(agentName, 0);
+                rank.put(agentName, i+1);
             }
             int e = in.nextInt();               //banyak hari latian
             StringBuilder stringHasil = new StringBuilder();
@@ -87,11 +87,16 @@ class TP1{
                     rankUpdate(agentName, rankingCode);
                     }
 
-                Object[] stringRank = agentRank.toArray();
                 for (int j = 0; j < n; j++) {
-                    stringHasil.append(stringRank[j]);
+                    String tempAgent = agentRank.poll();
+                    if (j + 1 < rank.get(tempAgent)){
+                        dontAdd.add(tempAgent);
+                    }
+                    rank.put(tempAgent, j + 1);
+                    stringHasil.append(tempAgent);
                     stringHasil.append(" ");
-                    if ((j + 1) % n == 0){
+                    agentRank.addLast(tempAgent);
+                    if ((j + 1) % n == 0) {
                         stringHasil.append("\n");
                     }
                 }
@@ -119,15 +124,35 @@ class TP1{
                     break;
                 }
                 case "EVALUASI": {
+                    agentRank.removeAll(dontAdd);
+                    int size = agentRank.size();
+                    for (int i = 0; i < size; i++) {
+                        String currAgent = agentRank.poll();
+                        if (currAgent == null){
+                            stringHasil.append("TIDAK ADA");
+                        } else {
+                            stringHasil.append(currAgent);
+                            stringHasil.append(" ");
+                        }
+                    }
+                    break;
+                }
+                case "DUO": {
+
+                    break;
+                }
+                case "DEPLOY": {
 
                     break;
                 }
             }
             out.println(stringHasil);
             stringHasil.setLength(0);
-            agentRank.clear();
-            agentOrigin.clear();
-            agentChoosen.clear();
+            dontAdd = new LinkedList<>();
+            rank = new HashMap<>();
+            agentRank = new LinkedList<>();
+            agentOrigin = new HashMap<>();
+            agentChoosen = new HashMap<>();
         }
 
         out.flush();
