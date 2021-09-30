@@ -3,7 +3,7 @@ import java.lang.reflect.Array;
 import java.util.*;
 import java.util.StringTokenizer;
 
-class TP1{
+class TP1v2{
     private static InputReader in;
     private static PrintWriter out;
     private static String currentAgent;
@@ -13,21 +13,27 @@ class TP1{
     private static Queue<String> basoGeming = new LinkedList<>();
     private static Queue<String> somayGeming = new LinkedList<>();
     private static Deque<Integer> currentOriginHolder = new LinkedList<>();
+    private static Stack<Integer> angkaGeming = new Stack<>();
+    private static Stack<String> stringGeming = new Stack<>();
+    private static Map<String, Boolean> udahPernahGeming = new HashMap<>();
     private static Map<String, String> agentOrigin = new HashMap<>();
     private static Map<String, Integer> agentChoosen = new HashMap<>();
     private static Map<String, Integer> rank = new HashMap<>();
 
-
-
-
-    static private void rankUpdate(String agent, Integer rankCode) {
-        agentRank.remove(agent);
-        if (rankCode == 0) {
-            agentRank.addFirst(agent);
-            agentChoosen.put(agent, agentChoosen.get(agent) + 1);
-        } else {
-            agentRank.addLast(agent);
-            agentChoosen.put(agent, agentChoosen.get(agent) + 1);
+    static private void rankUpdate(Stack<Integer> integer, Stack<String> string) {
+        while (!(integer.size() == 0)) {
+            String agent = string.pop();
+            Integer rankCode = integer.pop();
+            if (!udahPernahGeming.get(agent)) {
+                agentRank.remove(agent);
+                if (rankCode == 0) {
+                    agentRank.addFirst(agent);
+                    udahPernahGeming.put(agent, true);
+                } else {
+                    agentRank.addLast(agent);
+                    udahPernahGeming.put(agent, true);
+                }
+            }
         }
     }
 
@@ -88,8 +94,12 @@ class TP1{
                     String agentName = in.next();
                     int rankingCode = in.nextInt();
 
-                    rankUpdate(agentName, rankingCode);
+                    stringGeming.add(agentName);
+                    angkaGeming.add(rankingCode);
+                    udahPernahGeming.put(agentName, false);
                 }
+                rankUpdate(angkaGeming, stringGeming);
+
                 for (int j = 0; j < n; j++) {
                     String tempAgent = agentRank.poll();
                     if (j + 1 < rank.get(tempAgent)){
@@ -145,12 +155,12 @@ class TP1{
                 case "DUO": {
                     int size = agentRank.size();
                     for (int i = 0; i < size; i++) {
-                       String agent = agentRank.poll();
-                       if (agentOrigin.get(agent).equals("B")) {
-                           basoGeming.add(agent);
-                       } else {
-                           somayGeming.add(agent);
-                       }
+                        String agent = agentRank.poll();
+                        if (agentOrigin.get(agent).equals("B")) {
+                            basoGeming.add(agent);
+                        } else {
+                            somayGeming.add(agent);
+                        }
                     }
                     int sizeGeming = Math.min(basoGeming.size(), somayGeming.size());
                     for (int i = 0; i < sizeGeming; i++) {
@@ -158,7 +168,7 @@ class TP1{
                         out.print(" ");
                         out.print(somayGeming.poll());
                         out.println();
-                        }
+                    }
                     if (basoGeming.size() == 0 && somayGeming.size() != 0) {
                         out.print("TIDAK DAPAT: ");
                         while (somayGeming.size() != 0) {
@@ -181,6 +191,8 @@ class TP1{
                     break;
                 }
             }
+            stringGeming = new Stack<>();
+            angkaGeming = new Stack<>();
             somayGeming = new LinkedList<>();
             basoGeming = new LinkedList<>();
             dontAdd = new LinkedList<>();
