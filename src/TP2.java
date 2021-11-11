@@ -12,61 +12,75 @@ public class TP2 {
     private static InputReader in;
     private static PrintWriter out;
     private static Map<String, Pulau> mapPulau;
+    private static Map<String, Pulau> mapKuil;
 
     static class NodeDaratan {
         public int tinggi;
-        public NodeDaratan next;
-        public NodeDaratan prev;
-        public String kuil;
+        public NodeDaratan next, prev, raiden;
+        public String namaKuil;
 
-        public NodeDaratan(int tinggi) {
+        public NodeDaratan(int tinggi){
             this.tinggi = tinggi;
-            this.next = null;
-            this.prev = null;
-            this.kuil = null;
         }
 
-        public void addKuil(String input) {
-            this.kuil = input;
+        public void addKuil(String namaKuil) {
+            this.namaKuil = namaKuil;
         }
     }
 
     static class Pulau {
-        public String nama;
-        public NodeDaratan current;
-        public NodeDaratan head;
-        public int len;
+        public String namaPulau;
+        public NodeDaratan head, tail, current;
+        public Pulau next, prev;
+        public int length;
 
-        public Pulau(String nama) {
-            this.nama = nama;
+        public Pulau(String namaPulau) {
+            this.namaPulau = namaPulau;
         }
 
-        public void buatDaratan(int tinggi) {
-            len++;
-            if (len == 1) {
-                current = new NodeDaratan(tinggi);
-                head = current;
-            } else if (len > 1) {
-                NodeDaratan newNode = new NodeDaratan(tinggi);
-                newNode.prev = current;
-                current.next = newNode;
-                current = newNode;
+        public void addDaratan(int tinggi) {
+            NodeDaratan newDaratan = new NodeDaratan(tinggi);
+            if (length == 0) {
+                this.head = newDaratan;
+                this.tail = newDaratan;
+            } else if (length > 1) {
+                this.tail.next = newDaratan;
+                newDaratan.prev = this.tail;
+                this.tail = newDaratan;
             }
+            length++;
         }
 
-        public void hapusDaratan() {
-            len--;
-            if (len == 0) {
-                current = null;
-            }
-            else if (len > 0) {
-                current = current.prev;
-                current.next = null;
-            }
+        public void gabunginDaratan(Pulau pulau) {
+            this.tail.next = pulau.head;
+            pulau.head.prev = this.tail;
+            this.length += pulau.length;
+            this.tail = pulau.tail;
         }
 
-        public void addKuil(String input) {
-            current.addKuil(input);
+        public void gabunginPulau(Pulau pulau) {
+            while (this.next != null) {
+                this.next = this.next.next;
+                this.length += pulau.length;
+            }
+            this.next = pulau;
+            pulau.prev = this;
+        }
+
+        public void separatismeDaratan() {
+            NodeDaratan sebelumhead = this.head.prev;
+            sebelumhead.next = null;
+            this.head.prev = null;
+        }
+
+        public void separatismePulau() {
+            Pulau pulausebelumnya = this.prev;
+            pulausebelumnya.next = null;
+            this.prev = null;
+            while (pulausebelumnya != null) {
+                pulausebelumnya.length -= this.length;
+                pulausebelumnya = pulausebelumnya.prev;
+            }
         }
     }
 
@@ -88,32 +102,44 @@ public class TP2 {
 
             for (int j = 0; j < jumlahDaratan; j++) {
                 int tinggi = in.nextInt();
-                pulauBaru.buatDaratan(tinggi);
+                pulauBaru.addDaratan(tinggi);
             }
-            String kuil = "kuil ".concat(namaPulau);
-            pulauBaru.addKuil(kuil);
-            pulauBaru.current = pulauBaru.head;
+            if (pulauBaru.length == 1) {
+                pulauBaru.head.addKuil(namaPulau);
+                mapKuil.put(namaPulau, pulauBaru);
+            }
         }
 
         String pulauRaiden = in.next();
-        int daratanRaiden = in.nextInt();
+        int daratanKe = in.nextInt();
         Pulau tempatRaiden = mapPulau.get(pulauRaiden);
 
-        for (int i = 0; i < tempatRaiden.len; i++) {
-            if (tempatRaiden.current.tinggi != daratanRaiden) {
-                tempatRaiden.current = tempatRaiden.current.next;
+        NodeDaratan raidendisinibos = tempatRaiden.head;
+        for (int i = 1; i < tempatRaiden.length; i++) {
+            if (i != daratanKe) {
+                raidendisinibos = raidendisinibos.next;
+            } else {
+                tempatRaiden.current = raidendisinibos;
             }
         }
 
         int jumlahMasukkan = in.nextInt();
         for (int i = 0; i < jumlahMasukkan; i++) {
             String perintah = in.next();
-            switch(perintah) {
+            switch (perintah) {
                 case "UNIFIKASI": {
-
+                    String joinkesini = in.next();
+                    String sokinjoin = in.next();
+                    Pulau pulaujoin = mapPulau.get(joinkesini);
+                    Pulau yangdijoinin = mapPulau.get(sokinjoin);
+                    pulaujoin.gabunginDaratan(yangdijoinin);
+                    pulaujoin.gabunginPulau(yangdijoinin);
                 }
                 case "PISAH": {
-
+                    String gerakanseparatis = in.next();
+                    Pulau adayangmakar = mapKuil.get(gerakanseparatis);
+                    adayangmakar.separatismeDaratan();
+                    adayangmakar.separatismePulau();
                 }
                 case "GERAK": {
 
