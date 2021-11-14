@@ -8,18 +8,18 @@ import java.util.*;
 import static java.lang.Math.min;
 import static java.lang.Math.max;
 
-public class TP2 {
+public class TP2v2 {
     private static InputReader in;
     private static PrintWriter out;
     private static Map<String, Pulau> mapPulau = new HashMap<>();
     private static Map<String, Pulau> mapKuil = new HashMap<>();
 
     static class NodeDaratan {
-        public int tinggi;
+        public long tinggi;
         public NodeDaratan next, prev;
         public String namaKuil;
 
-        public NodeDaratan(int tinggi){
+        public NodeDaratan(long tinggi){
             this.tinggi = tinggi;
         }
 
@@ -52,9 +52,25 @@ public class TP2 {
         }
 
         public void gabunginDaratan(Pulau pulau) {
-            this.tail.next = pulau.head;
-            pulau.head.prev = this.tail;
-            this.tail = pulau.tail;
+//            this.tail.next = pulau.head;
+//            out.println(tail.next.tinggi);
+//            pulau.head.prev = this.tail;
+            Pulau head = this;
+//            out.println(head.namaPulau + " " + this.tail.tinggi +" "+ this.tail.next.tinggi);
+            if (head.next != null) {
+                while (head.next != null) {
+                    head.tail = pulau.tail;
+//                    out.println(head.namaPulau + " ekornya " + head.tail.tinggi);
+                    head = head.next;
+                }
+            }
+//            out.println(head.namaPulau);
+            NodeDaratan b = pulau.head;
+            head.tail.next = pulau.head;
+            pulau.head.prev = head.tail;
+            NodeDaratan node = this.head;
+
+//            out.println(head.namaPulau + " ekornya: " + head.tail.tinggi);
         }
 
         public void gabunginPulau(Pulau pulau) {
@@ -76,6 +92,15 @@ public class TP2 {
             NodeDaratan sebelumhead = this.head.prev;
             sebelumhead.next = null;
             this.head.prev = null;
+            Pulau pulau = this.prev;
+            if (pulau.prev != null) {
+                while (pulau.prev != null) {
+                    pulau.tail = sebelumhead;
+//                    out.println(pulau.namaPulau + " ekornya: " + pulau.tail.tinggi);
+                    pulau = pulau.prev;
+                }
+            }
+            pulau.tail = sebelumhead;
         }
 
         public void separatismePulau() {
@@ -104,6 +129,7 @@ public class TP2 {
 
         public int bikingunung(int minimalnaik, int tinggi) {
             NodeDaratan awal = this.head;
+//            out.println(this.tail.tinggi+ " " +this.namaPulau);
             int count = 0;
             if (awal.next != null) {
                 while (awal.next != null) {
@@ -147,7 +173,7 @@ public class TP2 {
         }
 
         public void hancurinbos() {
-            int tinggiyghilang = this.current.tinggi;
+            long tinggiyghilang = this.current.tinggi;
 //            System.out.println("tadi ada di sini " + tinggiyghilang);
             if (this.current.namaKuil != null) {
                 out.println(0);
@@ -156,12 +182,31 @@ public class TP2 {
             if (this.current.prev != null && this.current.next == null) {
                 this.current.prev.next = null;
                 this.current = this.current.prev;
+                Pulau tail = this;
+                if (tail.prev != null) {
+                    while (tail.prev != null) {
+                        tail.tail = this.current;
+//                    out.println(tail.namaPulau + " " + tail.tail.tinggi);
+                        tail = tail.prev;
+                    }
+                } tail.tail = this.current;
+//                out.println(tail.namaPulau + " " + tail.tail.tinggi);
 //                System.out.println("sekarang ada di sini " + this.current.tinggi);
             }
-            else if (this.current.prev != null && this.current.next != null) {
+            else if (this.current.prev != null) {
                 this.current.prev.next = this.current.next;
                 this.current.next.prev = this.current.prev;
                 this.current = this.current.prev;
+            }
+            this.length -= 1;
+            Pulau curr = this;
+//            out.println("pulau " + curr.namaPulau + " panjangnya " + curr.length);
+            if (curr.prev != null) {
+                while (curr.prev != null) {
+                    curr = curr.prev;
+                    curr.length -= 1;
+//                    out.println("pulau " + curr.namaPulau + " panjangnya " + curr.length);
+                }
             }
 //                System.out.println("sekarang ada di sini " + this.current.tinggi);
             out.println(tinggiyghilang);
@@ -176,9 +221,9 @@ public class TP2 {
                 return;
             }
             if (this.current.prev.tinggi < daratan.tinggi) {
-                 newDaratan = new NodeDaratan(this.current.prev.tinggi);
+                newDaratan = new NodeDaratan(this.current.prev.tinggi);
             } else {
-                 newDaratan = new NodeDaratan(daratan.tinggi);
+                newDaratan = new NodeDaratan(daratan.tinggi);
             }
             if (this.current.next != null) {
                 newDaratan.next = this.current.next;
@@ -189,8 +234,18 @@ public class TP2 {
             else {
                 this.current.next = newDaratan;
                 newDaratan.prev = this.current;
+                this.tail = newDaratan;
             }
-//            System.out.println("pulau baru tingginya " + this.current.next.tinggi);
+            this.length += 1;
+            Pulau curr = this;
+//            out.println("pulau " + curr.namaPulau + " panjangnya " + curr.length);
+            if (curr.prev != null) {
+                while (curr.prev != null) {
+                    curr = curr.prev;
+                    curr.length += 1;
+//                    out.println("pulau " + curr.namaPulau + " panjangnya " + curr.length);
+                }
+            }
             out.println(this.current.next.tinggi);
         }
 
@@ -200,11 +255,13 @@ public class TP2 {
             if (kepala.next != null) {
                 while(kepala.next != null) {
                     if (kepala.tinggi < tinggi) {
+//                        out.println(kepala.tinggi + " < " + tinggi);
                         count++;
                     } kepala = kepala.next;
                 }
             }
             if (kepala.tinggi < tinggi) {
+//                out.println(kepala.tinggi + " < " + tinggi);
                 count += 1;
             }
             return count;
@@ -263,6 +320,7 @@ public class TP2 {
                     Pulau pulaujoin = mapPulau.get(joinkesini);
                     Pulau yangdijoinin = mapPulau.get(sokinjoin);
 //                    out.println("mau gabungin pulau " + pulaujoin.namaPulau + " di pulau " +yangdijoinin.namaPulau);
+//                    out.println("-------UNFIKASI------");
                     pulaujoin.gabunginDaratan(yangdijoinin);
                     pulaujoin.gabunginPulau(yangdijoinin);
                     break;
@@ -273,6 +331,7 @@ public class TP2 {
 //                    out.println("mau misahin " + gerakanseparatis);
                     Pulau adayangmakar = mapKuil.get(gerakanseparatis);
 //                    System.out.println(adayangmakar.namaPulau);
+//                    out.println("------PISAH------");
                     adayangmakar.separatismeDaratan();
                     adayangmakar.separatismePulau();
                     break;
@@ -300,7 +359,7 @@ public class TP2 {
                 case "TEBAS": {
                     String senggolkemana = in.next();
                     int senggolberapapulau = in.nextInt();
-                    int patokan = tempatRaiden.current.tinggi;
+                    long patokan = tempatRaiden.current.tinggi;
                     NodeDaratan raiden = null;
                     NodeDaratan move = tempatRaiden.current;
                     NodeDaratan beforemove;
@@ -335,7 +394,7 @@ public class TP2 {
                     else {
                         tempatRaiden.current = raiden;
                         if (senggolkemana.equals("KIRI"))
-                           out.println(tempatRaiden.current.next.tinggi);
+                            out.println(tempatRaiden.current.next.tinggi);
                         else
                             out.println(tempatRaiden.current.prev.tinggi);
                     }
