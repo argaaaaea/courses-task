@@ -1,0 +1,9 @@
+6
+BE 7 1
+NI 71 2
+QI 84 3
+JO 84 4
+WU 43 5
+FE 80 6
+1
+SOLD_OUT WU

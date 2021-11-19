@@ -1,0 +1,8 @@
+5
+TA 2 1
+CI 66 2
+PA 77 3
+QA 80 4
+KE 33 5
+1
+SOLD_OUT KE

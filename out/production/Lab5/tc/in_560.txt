@@ -1,0 +1,6 @@
+3
+PA 13 1
+BA 19 2
+XE 57 3
+1
+SOLD_OUT PA

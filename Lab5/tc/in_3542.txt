@@ -1,0 +1,8 @@
+5
+NU 40 1
+BU 55 2
+TU 83 3
+HA 40 4
+KI 84 5
+1
+SOLD_OUT NU

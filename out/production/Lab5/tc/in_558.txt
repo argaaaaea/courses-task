@@ -1,0 +1,7 @@
+4
+JI 87 1
+CI 74 2
+WU 58 3
+RE 86 4
+1
+SOLD_OUT CI

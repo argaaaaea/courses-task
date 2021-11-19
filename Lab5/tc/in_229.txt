@@ -1,0 +1,8 @@
+5
+DE 45 1
+PE 6 2
+FA 41 3
+LI 88 4
+XI 51 5
+1
+SOLD_OUT DE

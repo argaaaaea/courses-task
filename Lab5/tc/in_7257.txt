@@ -1,0 +1,7 @@
+4
+XA 65 1
+NI 95 2
+CU 72 3
+FA 71 4
+1
+SOLD_OUT CU

@@ -1,0 +1,6 @@
+3
+PU 65 1
+LE 4 2
+DU 9 3
+1
+SOLD_OUT LE

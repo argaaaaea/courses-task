@@ -1,0 +1,8 @@
+5
+XI 27 1
+XO 23 2
+JO 69 3
+FO 33 4
+ZI 22 5
+1
+SOLD_OUT XO

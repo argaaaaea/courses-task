@@ -1,0 +1,8 @@
+5
+DI 11 1
+GE 27 2
+QI 12 3
+BU 39 4
+XE 46 5
+1
+SOLD_OUT QI

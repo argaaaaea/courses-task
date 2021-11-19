@@ -1,0 +1,6 @@
+3
+SO 68 1
+NA 70 2
+BO 11 3
+1
+SOLD_OUT BO

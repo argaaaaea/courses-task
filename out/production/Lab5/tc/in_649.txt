@@ -1,0 +1,8 @@
+5
+TE 15 1
+DO 43 2
+FO 64 3
+MI 71 4
+MU 37 5
+1
+SOLD_OUT MI

@@ -1,0 +1,9 @@
+6
+SU 33 1
+DU 4 2
+JE 93 3
+BU 64 4
+RO 49 5
+HA 1 6
+1
+SOLD_OUT HA

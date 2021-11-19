@@ -1,0 +1,8 @@
+5
+PI 97 1
+SU 25 2
+QE 2 3
+JO 93 4
+VE 7 5
+1
+STOCK WA 18 6

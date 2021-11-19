@@ -1,0 +1,8 @@
+5
+SA 30 1
+RI 6 2
+FA 17 3
+GU 78 4
+TI 27 5
+1
+SOLD_OUT SA

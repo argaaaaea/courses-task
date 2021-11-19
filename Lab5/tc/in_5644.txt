@@ -1,0 +1,6 @@
+3
+XO 65 1
+YA 43 2
+CI 18 3
+1
+SOLD_OUT YA

@@ -1,0 +1,6 @@
+3
+FE 47 1
+HU 87 2
+NI 32 3
+1
+SOLD_OUT FE

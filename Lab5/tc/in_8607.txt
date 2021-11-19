@@ -1,0 +1,8 @@
+5
+DA 62 1
+VE 57 2
+HE 60 3
+GA 80 4
+JO 86 5
+1
+SOLD_OUT HE

@@ -1,0 +1,6 @@
+3
+TA 69 1
+BI 21 2
+QU 73 3
+1
+SOLD_OUT TA

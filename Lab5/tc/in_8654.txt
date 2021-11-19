@@ -1,0 +1,7 @@
+4
+RE 25 1
+JI 98 2
+CE 72 3
+TE 57 4
+1
+SOLD_OUT JI

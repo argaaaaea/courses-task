@@ -1,0 +1,7 @@
+4
+LO 21 1
+LE 53 2
+GE 20 3
+CU 92 4
+1
+SOLD_OUT LE

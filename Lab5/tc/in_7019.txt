@@ -1,0 +1,6 @@
+3
+NI 83 1
+XU 94 2
+JO 58 3
+1
+SOLD_OUT NI

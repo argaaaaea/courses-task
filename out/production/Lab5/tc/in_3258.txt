@@ -1,0 +1,9 @@
+6
+DO 95 1
+CO 100 2
+GO 10 3
+CA 6 4
+WI 83 5
+NE 88 6
+1
+STOCK HI 5 7

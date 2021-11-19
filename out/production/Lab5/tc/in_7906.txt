@@ -1,0 +1,8 @@
+5
+NA 44 1
+CI 72 2
+HE 51 3
+ZE 95 4
+JA 31 5
+1
+SOLD_OUT NA

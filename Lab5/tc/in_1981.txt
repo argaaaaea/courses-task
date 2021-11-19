@@ -1,0 +1,8 @@
+5
+XI 94 1
+FI 80 2
+QE 56 3
+LI 93 4
+XA 11 5
+1
+SOLD_OUT FI

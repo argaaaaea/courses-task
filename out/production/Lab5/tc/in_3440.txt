@@ -1,0 +1,9 @@
+6
+KE 55 1
+ZO 52 2
+PA 5 3
+GE 68 4
+XA 76 5
+HO 15 6
+1
+STOCK YO 95 7

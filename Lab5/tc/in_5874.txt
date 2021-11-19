@@ -1,0 +1,7 @@
+4
+XU 24 1
+TA 79 2
+HI 5 3
+FU 2 4
+1
+SOLD_OUT TA

@@ -1,0 +1,5 @@
+1
+KU 31 1
+2
+STOCK NI 36 2
+BELI 2 117

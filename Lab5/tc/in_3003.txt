@@ -1,0 +1,9 @@
+6
+LO 92 1
+FA 6 2
+BO 76 3
+HA 81 4
+LU 64 5
+JI 70 6
+1
+STOCK KA 32 7

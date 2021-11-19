@@ -1,0 +1,9 @@
+6
+XE 45 1
+TO 49 2
+HU 69 3
+NO 16 4
+VO 51 5
+HE 9 6
+1
+STOCK PU 27 7

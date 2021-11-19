@@ -1,0 +1,7 @@
+4
+NI 31 1
+FO 15 2
+LE 78 3
+DA 23 4
+1
+SOLD_OUT LE

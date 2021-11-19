@@ -1,0 +1,7 @@
+4
+VE 100 1
+TE 34 2
+XA 60 3
+BI 57 4
+1
+SOLD_OUT BI

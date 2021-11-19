@@ -1,0 +1,8 @@
+5
+SO 38 1
+HE 63 2
+ME 94 3
+NA 6 4
+CI 23 5
+1
+SOLD_OUT HE

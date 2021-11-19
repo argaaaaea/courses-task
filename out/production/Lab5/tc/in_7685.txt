@@ -1,0 +1,6 @@
+3
+NA 26 1
+ZA 19 2
+JU 25 3
+1
+SOLD_OUT ZA

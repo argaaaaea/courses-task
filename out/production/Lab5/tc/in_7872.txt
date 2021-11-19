@@ -1,0 +1,6 @@
+3
+WA 82 1
+ZE 58 2
+PI 5 3
+1
+SOLD_OUT PI

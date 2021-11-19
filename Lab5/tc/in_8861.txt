@@ -1,0 +1,5 @@
+2
+LI 5 1
+HO 70 2
+1
+SOLD_OUT HO

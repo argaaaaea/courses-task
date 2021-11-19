@@ -1,0 +1,9 @@
+6
+HO 48 1
+QI 5 2
+KE 76 3
+XA 92 4
+BI 16 5
+JO 34 6
+1
+SOLD_OUT KE

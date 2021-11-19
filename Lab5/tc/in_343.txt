@@ -1,0 +1,8 @@
+5
+FO 19 1
+VI 58 2
+ME 44 3
+PE 56 4
+GO 91 5
+1
+SOLD_OUT FO

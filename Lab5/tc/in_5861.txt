@@ -1,0 +1,6 @@
+2
+XO 3 1
+LO 13 2
+2
+STOCK TO 5 3
+SOLD_OUT LO

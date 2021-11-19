@@ -1,0 +1,9 @@
+6
+RU 64 1
+XE 2 2
+NI 29 3
+GO 72 4
+WE 84 5
+QU 82 6
+1
+STOCK SE 21 7

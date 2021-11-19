@@ -1,0 +1,6 @@
+3
+CA 75 1
+QI 46 2
+NO 76 3
+1
+SOLD_OUT NO

@@ -1,0 +1,6 @@
+3
+FU 12 1
+KU 26 2
+XO 60 3
+1
+SOLD_OUT KU

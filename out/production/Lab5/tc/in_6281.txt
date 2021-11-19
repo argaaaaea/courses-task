@@ -1,0 +1,7 @@
+4
+VE 60 1
+NO 77 2
+YI 9 3
+PA 99 4
+1
+SOLD_OUT VE

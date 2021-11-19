@@ -1,0 +1,6 @@
+3
+RO 77 1
+KE 75 2
+MA 86 3
+1
+SOLD_OUT KE

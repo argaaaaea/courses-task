@@ -1,0 +1,6 @@
+3
+WI 11 1
+PO 100 2
+ZO 10 3
+1
+SOLD_OUT ZO

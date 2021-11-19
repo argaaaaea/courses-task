@@ -1,0 +1,7 @@
+4
+QO 32 1
+CA 44 2
+LI 4 3
+FE 90 4
+1
+SOLD_OUT CA

@@ -1,0 +1,8 @@
+5
+QU 23 1
+TI 56 2
+HU 64 3
+YE 6 4
+YU 1 5
+1
+STOCK MA 56 6

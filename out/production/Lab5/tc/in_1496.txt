@@ -1,0 +1,8 @@
+5
+ZE 49 1
+CU 67 2
+LO 51 3
+NA 8 4
+KI 60 5
+1
+SOLD_OUT KI

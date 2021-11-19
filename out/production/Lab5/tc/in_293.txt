@@ -1,0 +1,8 @@
+5
+LI 76 1
+QU 68 2
+BU 54 3
+LO 94 4
+WU 4 5
+1
+SOLD_OUT LI

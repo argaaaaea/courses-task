@@ -1,0 +1,8 @@
+5
+QE 78 1
+DU 27 2
+PE 22 3
+VE 84 4
+CO 37 5
+1
+SOLD_OUT QE

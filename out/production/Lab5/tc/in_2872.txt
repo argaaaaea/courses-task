@@ -1,0 +1,8 @@
+5
+BU 14 1
+BA 9 2
+KU 5 3
+YE 61 4
+SA 39 5
+1
+STOCK CI 59 6

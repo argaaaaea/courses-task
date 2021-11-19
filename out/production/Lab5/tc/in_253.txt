@@ -1,0 +1,9 @@
+6
+ZO 98 1
+RA 8 2
+HU 3 3
+BI 21 4
+TU 10 5
+BA 100 6
+1
+SOLD_OUT RA

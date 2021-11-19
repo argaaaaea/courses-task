@@ -1,0 +1,6 @@
+3
+KA 21 1
+YO 85 2
+TU 91 3
+1
+SOLD_OUT TU

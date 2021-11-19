@@ -1,0 +1,8 @@
+5
+SI 18 1
+DA 2 2
+YE 93 3
+BU 9 4
+JA 10 5
+1
+SOLD_OUT SI

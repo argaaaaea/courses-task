@@ -1,0 +1,8 @@
+5
+DE 61 1
+SE 23 2
+XO 92 3
+XA 59 4
+GO 9 5
+1
+SOLD_OUT XO

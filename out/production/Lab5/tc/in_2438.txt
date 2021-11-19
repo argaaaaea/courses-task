@@ -1,0 +1,9 @@
+6
+CI 84 1
+MA 1 2
+NU 49 3
+SE 45 4
+GI 7 5
+LU 86 6
+1
+SOLD_OUT LU

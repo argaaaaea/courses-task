@@ -1,0 +1,7 @@
+4
+CO 77 1
+SO 13 2
+ZO 88 3
+GE 11 4
+1
+SOLD_OUT GE

@@ -1,0 +1,5 @@
+1
+LI 4 1
+2
+SOLD_OUT LI
+STOCK BA 58 2

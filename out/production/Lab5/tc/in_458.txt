@@ -1,0 +1,9 @@
+6
+ZU 16 1
+VE 7 2
+DI 5 3
+BE 16 4
+FI 2 5
+KE 72 6
+1
+SOLD_OUT KE

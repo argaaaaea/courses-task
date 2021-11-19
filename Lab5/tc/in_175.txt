@@ -1,0 +1,8 @@
+5
+KE 31 1
+GA 98 2
+ZA 6 3
+GU 28 4
+TI 81 5
+1
+SOLD_OUT GU

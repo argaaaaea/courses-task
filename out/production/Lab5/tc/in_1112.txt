@@ -1,0 +1,8 @@
+5
+JI 87 1
+GA 66 2
+RI 95 3
+FI 90 4
+NI 3 5
+1
+SOLD_OUT GA

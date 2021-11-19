@@ -1,0 +1,6 @@
+3
+WI 17 1
+XI 45 2
+DE 99 3
+1
+SOLD_OUT XI

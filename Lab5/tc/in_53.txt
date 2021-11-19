@@ -1,0 +1,8 @@
+5
+DU 84 1
+SU 67 2
+WU 8 3
+DI 36 4
+PO 31 5
+1
+SOLD_OUT DI

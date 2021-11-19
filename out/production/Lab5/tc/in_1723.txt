@@ -1,0 +1,8 @@
+5
+RA 66 1
+CI 59 2
+ZU 73 3
+ZI 19 4
+SI 62 5
+1
+SOLD_OUT ZI

@@ -1,0 +1,9 @@
+6
+MU 64 1
+LI 73 2
+FA 45 3
+FI 49 4
+JU 9 5
+ZE 44 6
+1
+STOCK RO 37 7

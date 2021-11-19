@@ -1,0 +1,9 @@
+6
+KI 82 1
+YE 9 2
+MA 52 3
+HA 6 4
+LO 62 5
+XI 19 6
+1
+SOLD_OUT YE

@@ -1,0 +1,8 @@
+5
+BE 54 1
+BU 83 2
+RU 55 3
+DO 47 4
+FO 8 5
+1
+SOLD_OUT BE

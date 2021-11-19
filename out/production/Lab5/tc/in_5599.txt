@@ -1,0 +1,6 @@
+3
+BI 62 1
+YO 90 2
+SO 9 3
+1
+SOLD_OUT BI

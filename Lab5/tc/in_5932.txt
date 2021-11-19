@@ -1,0 +1,7 @@
+4
+BO 96 1
+YO 22 2
+MA 55 3
+BE 52 4
+1
+SOLD_OUT BO

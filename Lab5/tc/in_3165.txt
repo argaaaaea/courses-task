@@ -1,0 +1,8 @@
+5
+ME 22 1
+MA 47 2
+GI 92 3
+GO 77 4
+HO 3 5
+1
+SOLD_OUT ME

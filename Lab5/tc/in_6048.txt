@@ -1,0 +1,8 @@
+5
+GO 42 1
+VE 14 2
+SO 41 3
+WU 79 4
+GU 95 5
+1
+SOLD_OUT GO

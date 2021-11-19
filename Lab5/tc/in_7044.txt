@@ -1,0 +1,7 @@
+4
+SI 16 1
+FU 51 2
+XO 23 3
+KE 23 4
+1
+SOLD_OUT FU

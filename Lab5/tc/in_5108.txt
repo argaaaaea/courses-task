@@ -1,0 +1,8 @@
+5
+WE 15 1
+PI 67 2
+FU 13 3
+PA 32 4
+SA 3 5
+1
+SOLD_OUT FU

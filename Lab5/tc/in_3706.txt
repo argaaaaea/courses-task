@@ -1,0 +1,9 @@
+6
+DE 64 1
+BE 83 2
+TU 46 3
+QU 1 4
+WA 28 5
+DO 49 6
+1
+SOLD_OUT TU

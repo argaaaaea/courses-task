@@ -1,0 +1,7 @@
+4
+SA 49 1
+WU 3 2
+LO 18 3
+WI 100 4
+1
+SOLD_OUT SA

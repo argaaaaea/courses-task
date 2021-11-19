@@ -1,0 +1,9 @@
+6
+QO 71 1
+ZU 1 2
+VE 63 3
+KI 49 4
+JE 83 5
+HA 92 6
+1
+STOCK TO 27 7

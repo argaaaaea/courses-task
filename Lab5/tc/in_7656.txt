@@ -1,0 +1,6 @@
+3
+DA 4 1
+NO 59 2
+GO 45 3
+1
+SOLD_OUT NO

@@ -1,0 +1,6 @@
+3
+SE 74 1
+YI 48 2
+TU 25 3
+1
+SOLD_OUT TU

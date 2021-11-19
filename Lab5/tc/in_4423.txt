@@ -1,0 +1,5 @@
+2
+XA 90 1
+HO 48 2
+1
+SOLD_OUT HO

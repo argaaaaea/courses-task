@@ -1,0 +1,8 @@
+5
+BO 93 1
+MU 57 2
+RO 76 3
+VA 8 4
+LE 5 5
+1
+STOCK BA 57 6

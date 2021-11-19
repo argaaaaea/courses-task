@@ -1,0 +1,7 @@
+4
+RU 27 1
+VI 1 2
+CO 47 3
+KO 70 4
+1
+SOLD_OUT RU

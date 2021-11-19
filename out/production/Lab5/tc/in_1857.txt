@@ -1,0 +1,8 @@
+5
+LO 59 1
+JI 31 2
+PI 78 3
+VU 29 4
+XI 72 5
+1
+SOLD_OUT PI

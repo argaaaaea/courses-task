@@ -1,0 +1,7 @@
+4
+SU 24 1
+MU 90 2
+NO 82 3
+CO 56 4
+1
+SOLD_OUT SU

@@ -1,0 +1,6 @@
+3
+JO 38 1
+BI 58 2
+NI 19 3
+1
+SOLD_OUT JO

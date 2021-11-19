@@ -1,0 +1,9 @@
+6
+YO 13 1
+VU 29 2
+PU 5 3
+VA 13 4
+KU 27 5
+JO 10 6
+1
+SOLD_OUT YO

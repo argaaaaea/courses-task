@@ -1,0 +1,5 @@
+2
+CA 12 1
+ZU 20 2
+1
+SOLD_OUT CA

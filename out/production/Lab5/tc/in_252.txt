@@ -1,0 +1,6 @@
+3
+VA 84 1
+XE 57 2
+XO 30 3
+1
+SOLD_OUT VA

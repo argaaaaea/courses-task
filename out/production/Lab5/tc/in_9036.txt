@@ -1,0 +1,9 @@
+6
+JE 33 1
+PA 33 2
+GU 51 3
+YI 82 4
+BA 6 5
+TU 88 6
+1
+STOCK WI 30 7

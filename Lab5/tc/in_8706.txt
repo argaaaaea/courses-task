@@ -1,0 +1,8 @@
+5
+MO 78 1
+NU 15 2
+WO 18 3
+PU 56 4
+PO 16 5
+1
+SOLD_OUT MO

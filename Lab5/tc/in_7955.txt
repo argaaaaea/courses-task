@@ -1,0 +1,7 @@
+4
+QU 6 1
+WU 88 2
+NI 77 3
+NU 31 4
+1
+SOLD_OUT NU

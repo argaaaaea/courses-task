@@ -1,0 +1,9 @@
+6
+KI 59 1
+VA 7 2
+DA 45 3
+PU 57 4
+YA 60 5
+GI 89 6
+1
+STOCK RA 33 7

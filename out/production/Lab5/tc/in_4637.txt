@@ -1,0 +1,6 @@
+3
+FO 49 1
+SI 15 2
+NE 30 3
+1
+SOLD_OUT NE

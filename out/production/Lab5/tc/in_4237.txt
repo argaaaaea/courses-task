@@ -1,0 +1,9 @@
+6
+RU 54 1
+VU 54 2
+FE 62 3
+GA 73 4
+DA 92 5
+CO 10 6
+1
+STOCK BE 6 7

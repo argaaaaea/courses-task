@@ -1,0 +1,8 @@
+5
+HU 98 1
+SU 61 2
+YA 22 3
+QA 21 4
+KO 30 5
+1
+SOLD_OUT SU

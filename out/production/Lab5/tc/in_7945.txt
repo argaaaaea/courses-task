@@ -1,0 +1,9 @@
+6
+NI 73 1
+VO 77 2
+RO 18 3
+MO 16 4
+TA 63 5
+ZE 6 6
+1
+STOCK LA 6 7

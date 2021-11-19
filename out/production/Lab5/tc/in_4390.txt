@@ -1,0 +1,7 @@
+4
+JE 61 1
+JA 40 2
+TU 22 3
+PI 41 4
+1
+SOLD_OUT TU

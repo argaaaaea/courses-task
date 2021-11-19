@@ -1,0 +1,7 @@
+4
+HI 88 1
+RO 33 2
+SI 75 3
+GE 55 4
+1
+SOLD_OUT SI

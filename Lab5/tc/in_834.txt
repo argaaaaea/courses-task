@@ -1,0 +1,8 @@
+5
+XU 11 1
+QO 91 2
+PI 89 3
+CO 57 4
+TO 9 5
+1
+SOLD_OUT XU

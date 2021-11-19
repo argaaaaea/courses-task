@@ -1,0 +1,9 @@
+6
+YU 49 1
+KE 40 2
+CU 72 3
+FA 29 4
+GE 2 5
+SE 78 6
+1
+SOLD_OUT KE

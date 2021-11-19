@@ -1,0 +1,6 @@
+3
+WO 37 1
+DO 12 2
+HU 35 3
+1
+SOLD_OUT HU

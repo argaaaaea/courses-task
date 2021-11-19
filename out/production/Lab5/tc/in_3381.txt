@@ -1,0 +1,9 @@
+6
+PA 4 1
+SO 30 2
+FI 17 3
+DI 11 4
+ZA 27 5
+XE 66 6
+1
+STOCK NE 95 7

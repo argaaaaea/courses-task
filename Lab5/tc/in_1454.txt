@@ -1,0 +1,8 @@
+5
+GA 74 1
+WE 68 2
+BE 5 3
+ZI 21 4
+HO 41 5
+1
+STOCK ZA 3 6

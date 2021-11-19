@@ -1,0 +1,8 @@
+5
+SI 25 1
+BO 64 2
+NA 96 3
+YO 84 4
+QO 63 5
+1
+SOLD_OUT NA

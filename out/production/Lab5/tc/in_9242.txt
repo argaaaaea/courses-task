@@ -1,0 +1,8 @@
+5
+BE 39 1
+NE 12 2
+TA 90 3
+WE 76 4
+CE 4 5
+1
+SOLD_OUT WE

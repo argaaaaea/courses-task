@@ -1,0 +1,8 @@
+5
+PA 24 1
+ME 55 2
+GE 76 3
+QI 15 4
+PI 2 5
+1
+SOLD_OUT ME

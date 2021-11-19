@@ -1,0 +1,7 @@
+4
+XI 38 1
+DA 59 2
+ZA 9 3
+JU 46 4
+1
+SOLD_OUT ZA

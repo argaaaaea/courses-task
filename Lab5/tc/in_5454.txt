@@ -1,0 +1,7 @@
+4
+GO 53 1
+FU 66 2
+BA 23 3
+QI 85 4
+1
+SOLD_OUT BA

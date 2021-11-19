@@ -1,0 +1,8 @@
+5
+MO 53 1
+XE 56 2
+CE 63 3
+XI 28 4
+WA 22 5
+1
+SOLD_OUT WA

@@ -1,0 +1,8 @@
+5
+YU 28 1
+QU 35 2
+JO 57 3
+YE 37 4
+KE 32 5
+1
+SOLD_OUT QU

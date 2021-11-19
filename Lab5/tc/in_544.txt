@@ -1,0 +1,9 @@
+6
+MO 76 1
+HU 1 2
+VE 56 3
+KO 99 4
+GI 17 5
+LU 35 6
+1
+STOCK QU 53 7

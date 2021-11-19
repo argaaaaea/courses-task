@@ -1,0 +1,8 @@
+5
+HO 20 1
+NA 36 2
+RO 62 3
+QE 85 4
+KU 23 5
+1
+SOLD_OUT KU

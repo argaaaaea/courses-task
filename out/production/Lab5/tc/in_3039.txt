@@ -1,0 +1,6 @@
+2
+QU 27 1
+ZU 1 2
+2
+STOCK XI 28 3
+BELI 56 94

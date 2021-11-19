@@ -1,0 +1,9 @@
+6
+LO 71 1
+XA 12 2
+YA 91 3
+XI 28 4
+GI 61 5
+YI 3 6
+1
+SOLD_OUT LO

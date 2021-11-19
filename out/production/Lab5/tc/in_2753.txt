@@ -1,0 +1,8 @@
+5
+YI 76 1
+DU 26 2
+HU 4 3
+BI 41 4
+WA 12 5
+1
+SOLD_OUT WA

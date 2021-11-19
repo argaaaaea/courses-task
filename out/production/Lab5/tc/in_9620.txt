@@ -1,0 +1,8 @@
+5
+GI 23 1
+SE 69 2
+LI 36 3
+CO 36 4
+TU 84 5
+1
+SOLD_OUT TU

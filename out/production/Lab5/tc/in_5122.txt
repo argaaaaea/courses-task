@@ -1,0 +1,7 @@
+4
+KO 60 1
+CA 27 2
+HU 78 3
+KA 96 4
+1
+SOLD_OUT HU

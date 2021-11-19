@@ -1,0 +1,8 @@
+5
+YO 78 1
+TI 82 2
+LA 69 3
+YA 3 4
+QE 87 5
+1
+SOLD_OUT LA

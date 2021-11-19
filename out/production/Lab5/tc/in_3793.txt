@@ -1,0 +1,8 @@
+5
+WU 51 1
+BU 83 2
+PE 51 3
+RU 60 4
+WO 17 5
+1
+SOLD_OUT RU

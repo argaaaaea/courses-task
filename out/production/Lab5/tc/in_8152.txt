@@ -1,0 +1,9 @@
+6
+BA 8 1
+ZE 5 2
+ZO 63 3
+BU 7 4
+XI 57 5
+ZA 94 6
+1
+STOCK GE 50 7

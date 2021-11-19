@@ -1,0 +1,7 @@
+4
+TU 39 1
+RO 66 2
+YU 28 3
+KE 40 4
+1
+SOLD_OUT YU

@@ -1,0 +1,8 @@
+5
+GE 86 1
+KO 24 2
+BE 32 3
+WA 50 4
+QE 59 5
+1
+SOLD_OUT GE

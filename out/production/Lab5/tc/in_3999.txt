@@ -1,0 +1,8 @@
+5
+TI 22 1
+PI 45 2
+SA 22 3
+PE 43 4
+XU 30 5
+1
+SOLD_OUT SA

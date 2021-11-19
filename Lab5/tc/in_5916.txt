@@ -1,0 +1,8 @@
+5
+BE 16 1
+HI 19 2
+KA 30 3
+CU 99 4
+YE 27 5
+1
+SOLD_OUT HI

@@ -1,0 +1,9 @@
+6
+QE 51 1
+BI 88 2
+YO 50 3
+BA 1 4
+PE 40 5
+PA 80 6
+1
+SOLD_OUT PA

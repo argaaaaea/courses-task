@@ -1,0 +1,7 @@
+4
+SA 21 1
+MI 96 2
+BI 48 3
+KE 36 4
+1
+SOLD_OUT SA

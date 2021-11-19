@@ -1,0 +1,9 @@
+6
+LA 7 1
+MU 29 2
+QU 98 3
+NU 56 4
+GA 65 5
+LE 52 6
+1
+STOCK VI 99 7

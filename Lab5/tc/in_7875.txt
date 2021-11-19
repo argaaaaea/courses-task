@@ -1,0 +1,9 @@
+6
+CO 47 1
+JO 5 2
+WA 24 3
+GU 11 4
+GE 2 5
+YO 26 6
+1
+STOCK RI 5 7

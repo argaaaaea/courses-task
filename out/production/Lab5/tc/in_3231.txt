@@ -1,0 +1,7 @@
+4
+DI 1 1
+YA 36 2
+WU 1 3
+KO 4 4
+1
+SOLD_OUT DI

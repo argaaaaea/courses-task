@@ -1,0 +1,9 @@
+6
+TI 35 1
+RE 89 2
+YI 59 3
+KE 68 4
+FI 59 5
+ZO 84 6
+1
+STOCK KI 5 7

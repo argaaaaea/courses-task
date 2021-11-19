@@ -1,0 +1,6 @@
+3
+FO 9 1
+TE 28 2
+MI 99 3
+1
+SOLD_OUT TE

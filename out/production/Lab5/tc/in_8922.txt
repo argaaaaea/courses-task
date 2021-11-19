@@ -1,0 +1,7 @@
+4
+GO 80 1
+XE 34 2
+BE 16 3
+CE 45 4
+1
+SOLD_OUT BE

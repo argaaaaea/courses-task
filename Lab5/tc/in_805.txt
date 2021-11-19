@@ -1,0 +1,6 @@
+3
+DO 88 1
+JE 42 2
+FU 38 3
+1
+SOLD_OUT FU

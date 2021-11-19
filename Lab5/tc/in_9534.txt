@@ -1,0 +1,8 @@
+5
+GU 92 1
+YE 68 2
+GE 45 3
+BU 56 4
+CU 88 5
+1
+SOLD_OUT GU

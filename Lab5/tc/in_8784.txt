@@ -1,0 +1,7 @@
+4
+KE 17 1
+HI 100 2
+VI 23 3
+NI 99 4
+1
+SOLD_OUT VI

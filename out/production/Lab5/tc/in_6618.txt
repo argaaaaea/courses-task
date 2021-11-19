@@ -1,0 +1,9 @@
+6
+XU 3 1
+GO 96 2
+FI 76 3
+YA 13 4
+TI 1 5
+ZU 80 6
+1
+STOCK ZA 82 7

@@ -1,0 +1,6 @@
+3
+MA 18 1
+CA 24 2
+NA 5 3
+1
+SOLD_OUT NA

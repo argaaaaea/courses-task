@@ -1,0 +1,8 @@
+5
+YE 2 1
+ZO 49 2
+PI 67 3
+FA 13 4
+TA 61 5
+1
+SOLD_OUT ZO

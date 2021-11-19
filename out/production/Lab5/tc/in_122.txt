@@ -1,0 +1,8 @@
+5
+CA 22 1
+GU 65 2
+XO 10 3
+GA 79 4
+SU 44 5
+1
+SOLD_OUT GU
