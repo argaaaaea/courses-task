@@ -2,7 +2,7 @@
 
 This repository is intended to save and show my final algorithm for the Data Structure and Algorithms task.
 
-Lab0 is for tutorial
+Lab0 is for tutorial.
 ### Lab1
 Subject for Lab1 is algorithm analysis, including time complexity, space complexity, etc.
 ### Lab2
