@@ -10,7 +10,7 @@ import java.util.*;
 import static java.lang.Math.min;
 import static java.lang.Math.max;
 
-class Lab3 {
+class Lab3try {
 
     private static InputReader in;
     private static PrintWriter out;

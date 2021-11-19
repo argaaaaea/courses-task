@@ -61,13 +61,12 @@ public class lab5 {
 //            System.out.println("masuk ke mincost < L maxcost > R");
             return "-1 -1";
         }
-        System.out.println("here: " + min.cost + " " + max.cost);
         if ((min.cost > max.cost)) {
 //            System.out.println("masuk ke mincost > maxcost");
             return "-1 -1";
         }
 //        System.out.println(max.setOfType + " " + min.setOfType);
-        while ((max.type == min.type)) {
+        if ((max.type == min.type)) {
             int maxMin = -1;
             int maxAdd = -1;
             if (max.setOfType.size() > 1 || min.setOfType.size() > 1) {
@@ -80,19 +79,14 @@ public class lab5 {
                 return "-1 -1";
             }
             else {
-                min = tree.floor(tree.root, min.cost+1);
-                if (min == null) {
-                    return "-1 -1";
-                }
-                if (min.cost > max.cost) {
-                    return "-1 -1";
+                return handleBeli(min.cost + 1, max.cost + 1);
                 }
             }
-
+        else {
+            String maxStr = Integer.toString(max.cost);
+            String minStr = Integer.toString(min.cost);
+            return minStr + " " + maxStr;
         }
-        String maxStr = Integer.toString(max.cost);
-        String minStr = Integer.toString(min.cost);
-        return minStr + " " + maxStr;
     }
 
     //TODO
