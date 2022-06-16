@@ -8,7 +8,7 @@ Subject for Lab1 is algorithm analysis, including time complexity, space complex
 ### Lab2
 Subject for Lab2 is Abstract Data Types, inlcuding Queue, Stack, Map, etc.
 ### Lab3
-Subject for Lab3 is Recursion, including heal/tail recursion and memoization.
+Subject for Lab3 is Recursion, including head/tail recursion and memoization.
 ### Lab4
 Subject for Lab4 is mainly Linked-List, including how to remove nodes in the middle, how to add node in the middle linked list, and how to concat two linked list.
 ### Lab5
